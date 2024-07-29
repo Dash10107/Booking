@@ -42,14 +42,17 @@ import {
             <Pressable
               style={{ flexDirection: "row", flexWrap: "wrap", margin: 10 }}
             >
-              {route.params.photos.slice(0, 5).map((photo) => (
-                <View style={{ margin: 6 }}>
+              {route.params.photos.slice(0, 5).map((photo,index) => (
+                
+                
+                <View style={{ margin: 6 }} key={index}>
                   <Image
                     style={{
                       width: 120,
                       height: pixelNormalize(80),
                       borderRadius: pixelNormalize(4),
                     }}
+                    
                     source={{ uri: photo.image }}
                   />
                 </View>
